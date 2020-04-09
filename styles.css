@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --defaultSize: 400px;
+}
+
+.clock {
+    position: relative;
+    width: var(--defaultSize);
+    height: var(--defaultSize);
+    background: red;
+}
+
+.number {
+    position: absolute;
+    width: var(--defaultSize);
+    height: var(--defaultSize);
+    text-align: center;
+}
+
+.number1{ transform: rotate(30deg); }
+.number2{ transform: rotate(60deg); }
+.number3{ transform: rotate(90deg); }
+.number4{ transform: rotate(120deg); }
+.number5{ transform: rotate(150deg); }
+.number6{ transform: rotate(180deg); }
+.number7{ transform: rotate(210deg); }
+.number8{ transform: rotate(240deg); }
+.number9{ transform: rotate(270deg); }
+.number10{ transform: rotate(300deg); }
+.number11{ transform: rotate(330deg); }
+
+.handSecond {
+    --rotation: 30deg;
+    width: 5px;
+    margin-left: -2.5px;
+    height: calc(var(--defaultSize)/2.1);
+    border: 1px solid white;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: rotate(var(--rotation));
+    transform-origin: bottom;
+}
+
+.handMinute {
+    --rotation: 45deg;
+    width: 10px;
+    margin-left: -5px;
+    height: calc(var(--defaultSize)/2.1);
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    background: black;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(var(--rotation));
+    transform-origin: bottom;
+}
+
+.handHour {
+    --rotation: 270deg;
+    width: 12px;
+    margin-left: -6px;
+    height: calc(var(--defaultSize)/3);
+    position: absolute;
+    background: black;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(var(--rotation));
+    transform-origin: bottom;
+}
+
+.pin {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 -10px -10px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50%;
+}
